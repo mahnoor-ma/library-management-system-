@@ -1,0 +1,133 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f5f9, #e1e8f0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   FORM CONTAINER
+   ========================================================================== */
+.form-holder {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Navigation Link */
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: #6a11cb;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #500cb4;
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    color: #334155;
+    outline: none;
+    margin-bottom: 20px; /* Replaces the messy <br> tags */
+    transition: all 0.2s ease;
+}
+
+/* Input Focus States */
+input[type="text"]:focus {
+    border-color: #6a11cb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.15);
+}
+
+/* Disabled styling for user ID if you want to make it read-only later */
+input[name="users_id"] {
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Submit Button */
+.btn-create {
+    background: #6a11cb;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-create:hover {
+    background: #500cb4;
+}
+
+.btn-create:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   NOTIFICATIONS / ALERTS
+   ========================================================================== */
+.error, .success {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+.success {
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #86efac;
+}
